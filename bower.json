@@ -1,0 +1,30 @@
+{
+  "name": "allinonesearch",
+  "version": "0.0.0",
+  "homepage": "https://github.com/karjac14/allinonesearch",
+  "authors": [
+    "Karlo Eleuterio <karloe@gmail.com>"
+  ],
+  "description": "Shop in One Search, One Search for Shop",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "search",
+    "items",
+    "angular"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "font-awesome": "~4.5.0",
+    "jquery": "~2.2.0",
+    "angular-route": "~1.4.8"
+  }
+}
