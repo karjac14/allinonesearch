@@ -7,27 +7,27 @@
     function($routeProvider){
       $routeProvider
         .when('/', {
-          templateUrl: 'landing.html',
+          templateUrl: 'partials/landing.html',
           controller: function ($location, $rootScope){
             //some codes here
           },
           controllerAs: 'landing'
         })
         .when('/result', {
-          templateUrl: 'results.html',
+          templateUrl: 'partials/results.html',
           controller: function ($location, $rootScope){
             //some codes here
           },
           controllerAs: 'results'
         })
         .when('/item', {
-          templateUrl: 'details.html',
+          templateUrl: 'partials/item.html',
           controller: function ($location, $rootScope){
             //some codes here milestone 2
           },
-          controllerAs: 'details'
+          controllerAs: 'item'
         })
     })
 
-//IIFE for Angular Module ends   
+//IIFE for Angular Module ends
 })();

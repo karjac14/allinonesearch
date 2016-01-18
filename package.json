@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass scss/main.scss css/main.css",
     "start": "browser-sync start --server --directory --startPath index.html --files='*.html, css/main.css'"
   },
   "repository": {

@@ -14,10 +14,16 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body ng-app="allSearch">
 
+        <header>
+        <h1>All Search.</h1>
+        </header>
 
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <main class="container">
+          <ng-view></ng-view>
+        </main>
+
 
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
