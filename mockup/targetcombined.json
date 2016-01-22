@@ -1,0 +1,19 @@
+{
+  "countsCombined" : 60,
+  "resultsCombined" : [
+    {
+      "title": "Pomodoro Toy",
+      "description": "lorem ipsum yeah yeah",
+      "longDescription": "lorem ipsum yeah yeah lorem ipsum yeah yeah lorem ipsum yeah yeah",
+      "price" : 98.00,
+      "seller" : "EBAY"
+    },
+    {
+      "title": "Pomodoro Mat",
+      "description": "lorem ipsum yeah yeah",
+      "longDescription": "lorem ipsum yeah yeah lorem ipsum yeah yeah lorem ipsum yeah yeah",
+      "price" : 13.00,
+      "seller" : "ETSY"
+    }
+  ]
+}
