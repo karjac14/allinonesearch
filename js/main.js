@@ -27,25 +27,37 @@
           templateUrl: 'partials/results.html',
           controller: function ($location, $rootScope, $http, $scope){
 
+
+            //get etsy api
             $http.get(ETSY_OFF)
               .then(function (response){
                 $scope.etsyResult = response.data.results;
                 console.log($scope.etsyResult);
+
               },
               function(){
                 console.log("error from etsy");
               }
             )
 
+            //get ebay api
             $http.get(EBAY_OFF)
               .then(function (response){
                 $scope.ebayResult = response.data.findItemsByKeywordsResponse[0].searchResult[0].item;
                 console.log($scope.ebayResult);
               },
               function(){
-                console.log("error from etsy");
+                console.log("error from ebay");
               }
             )
+
+            cdShopGet();
+
+
+
+
+            $scope.combinedResult = [];
+
 
 
             //some codes here
