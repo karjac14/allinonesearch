@@ -27,36 +27,52 @@
           templateUrl: 'partials/results.html',
           controller: function ($location, $rootScope, $http, $scope){
 
+            var results = this;
+            // results.etsyResult = {};
+            // results.ebayResult = {};
 
             //get etsy api
             $http.get(ETSY_OFF)
               .then(function (response){
-                $scope.etsyResult = response.data.results;
-                console.log($scope.etsyResult);
+                results.etsyResult = response.data.results;
+                console.log(results.etsyResult.length);
 
               },
               function(){
                 console.log("error from etsy");
               }
-            )
+            );
 
             //get ebay api
             $http.get(EBAY_OFF)
               .then(function (response){
-                $scope.ebayResult = response.data.findItemsByKeywordsResponse[0].searchResult[0].item;
-                console.log($scope.ebayResult);
+                results.ebayResult = response.data.findItemsByKeywordsResponse[0].searchResult[0].item;
+                console.log(results.ebayResult.length);
+
               },
               function(){
                 console.log("error from ebay");
               }
-            )
+            );
 
-            cdShopGet();
+            //new object
+            results.combinedResult = {};
+
+            //load new object after sucess get on ebay and etsy
+            results.load = function (){
+              results.combinedResult.countsCombined = results.etsyResult.length + results.ebayResult.length;
+              console.log(results.combinedResult.countsCombined);
+            }
 
 
 
 
-            $scope.combinedResult = [];
+
+
+
+
+
+
 
 
 
